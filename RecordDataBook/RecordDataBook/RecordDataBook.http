@@ -1,0 +1,6 @@
+@RecordDataBook_HostAddress = http://localhost:5125
+
+GET {{RecordDataBook_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

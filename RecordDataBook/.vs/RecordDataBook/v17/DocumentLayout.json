@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|e:\\webaspnet\\recorddatabookapp\\recorddatabook\\recorddatabook\\controllers\\recordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|solutionrelative:recorddatabook\\controllers\\recordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|e:\\webaspnet\\recorddatabookapp\\recorddatabook\\recorddatabook\\entities\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|solutionrelative:recorddatabook\\entities\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|e:\\webaspnet\\recorddatabookapp\\recorddatabook\\recorddatabook\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|solutionrelative:recorddatabook\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|e:\\webaspnet\\recorddatabookapp\\recorddatabook\\recorddatabook\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|solutionrelative:recorddatabook\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|e:\\webaspnet\\recorddatabookapp\\recorddatabook\\recorddatabook\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|solutionrelative:recorddatabook\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|e:\\webaspnet\\recorddatabookapp\\recorddatabook\\recorddatabook\\migrations\\20241101170902_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|solutionrelative:recorddatabook\\migrations\\20241101170902_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|e:\\webaspnet\\recorddatabookapp\\recorddatabook\\recorddatabook\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|solutionrelative:recorddatabook\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|e:\\webaspnet\\recorddatabookapp\\recorddatabook\\recorddatabook\\recorddatabook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B2F144C4-06C6-4C34-8856-90121D96CAD9}|RecordDataBook\\RecordDataBook.csproj|solutionrelative:recorddatabook\\recorddatabook.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 98,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RecordController.cs",
+              "DocumentMoniker": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Controllers\\RecordController.cs",
+              "RelativeDocumentMoniker": "RecordDataBook\\Controllers\\RecordController.cs",
+              "ToolTip": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Controllers\\RecordController.cs",
+              "RelativeToolTip": "RecordDataBook\\Controllers\\RecordController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:12:07.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20241101170902_InitialCreate.cs",
+              "DocumentMoniker": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Migrations\\20241101170902_InitialCreate.cs",
+              "RelativeDocumentMoniker": "RecordDataBook\\Migrations\\20241101170902_InitialCreate.cs",
+              "ToolTip": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Migrations\\20241101170902_InitialCreate.cs",
+              "RelativeToolTip": "RecordDataBook\\Migrations\\20241101170902_InitialCreate.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwCIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:09:02.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Program.cs",
+              "RelativeDocumentMoniker": "RecordDataBook\\Program.cs",
+              "ToolTip": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Program.cs",
+              "RelativeToolTip": "RecordDataBook\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAkwBUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T16:56:19.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "RecordDataBook\\appsettings.Development.json",
+              "ToolTip": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\appsettings.Development.json",
+              "RelativeToolTip": "RecordDataBook\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-01T16:53:45.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\appsettings.json",
+              "RelativeDocumentMoniker": "RecordDataBook\\appsettings.json",
+              "ToolTip": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\appsettings.json",
+              "RelativeToolTip": "RecordDataBook\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-01T16:51:29.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "RecordDataBook\\Context\\AppDbContext.cs",
+              "ToolTip": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "RecordDataBook\\Context\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T16:47:58.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Record.cs",
+              "DocumentMoniker": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Entities\\Record.cs",
+              "RelativeDocumentMoniker": "RecordDataBook\\Entities\\Record.cs",
+              "ToolTip": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\Entities\\Record.cs",
+              "RelativeToolTip": "RecordDataBook\\Entities\\Record.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T16:44:41.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RecordDataBook.csproj",
+              "DocumentMoniker": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\RecordDataBook.csproj",
+              "RelativeDocumentMoniker": "RecordDataBook\\RecordDataBook.csproj",
+              "ToolTip": "E:\\webASPnet\\RecordDataBookApp\\RecordDataBook\\RecordDataBook\\RecordDataBook.csproj",
+              "RelativeToolTip": "RecordDataBook\\RecordDataBook.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-01T16:45:16.18Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 302,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
