@@ -1,36 +1,27 @@
-// src/api/api.ts
-const API_URL = import.meta.env.VITE_API_URL;
+import axios from 'axios';
 
-// src/api/api.ts
+const api = axios.create({
+    baseURL: import.meta.env.VITE_API_URL,
+});
+
+
 export const fetchRecords = async () => {
     try {
-        const response = await fetch(`${API_URL}/api/record`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
+        const response = await api.get('/api/record');
+        return response.data;
     } catch (error) {
-        console.error("Error fetching records:", error);
-        return []; // повертаємо порожній масив як резерв
+        console.error('Помилка при отриманні записів:', error);
+        throw error;
     }
 };
 
-export const createRecord = async (record: { question: string; name: string; age: number; email: string }) => {
+
+export const createRecord = async (record: { name: string; age: number; email: string; question: string; }) => {
     try {
-        const response = await fetch(`${API_URL}/api/record`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(record),
-        });
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
+        const response = await api.post('/api/record', record);
+        return response.data;
     } catch (error) {
-        console.error("Error creating record:", error);
-        return null; // повертаємо null як резерв
+        console.error('Помилка при створенні запису:', error);
+        throw error;
     }
 };
-

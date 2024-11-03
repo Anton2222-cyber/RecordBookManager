@@ -1,13 +1,15 @@
-// src/App.tsx
 import React from 'react';
 import RecordList from './components/RecordList';
-import CreateRecordForm from './components/CreateRecordForm';
+import CreateRecordForm from "./components/CreateRecordForm.tsx";
+
 
 const App: React.FC = () => {
+    const [refresh, setRefresh] = React.useState(0);
+
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-6">Record Management</h1>
-            <RecordList />
+        <div>
+            <CreateRecordForm onRecordCreated={() => setRefresh((prev) => prev + 1)} />
+            <RecordList key={refresh} />
         </div>
     );
 };
