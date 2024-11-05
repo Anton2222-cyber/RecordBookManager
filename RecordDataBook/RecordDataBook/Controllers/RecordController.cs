@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RecordDataBook.Context;
 using RecordDataBook.Entities;
+using RecordDataBook.Interfaces;
 
 namespace RecordDataBook.Controllers
 {
@@ -10,25 +11,47 @@ namespace RecordDataBook.Controllers
     [ApiController]
     public class RecordController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IRecordService _recordService;
 
-        public RecordController(AppDbContext context)
+        public RecordController(IRecordService recordService)
         {
-            _context = context;
+            _recordService = recordService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Record>>> GetRecords()
         {
-            return await _context.Records.ToListAsync();
+            var records = await _recordService.GetRecordsAsync();
+            return Ok(records);
         }
 
         [HttpPost]
         public async Task<ActionResult<Record>> CreateRecord(Record record)
         {
-            _context.Records.Add(record);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetRecords), new { id = record.Id }, record);
+            try
+            {
+                var createdRecord = await _recordService.CreateRecordAsync(record);
+                return CreatedAtAction(nameof(GetRecords), new { id = createdRecord.Id }, createdRecord);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Record>> UpdateRecord(int id, Record record)
+        {
+            try
+            {
+                var updatedRecord = await _recordService.UpdateRecordAsync(id, record);
+                return Ok(updatedRecord);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
     }
 }
+
