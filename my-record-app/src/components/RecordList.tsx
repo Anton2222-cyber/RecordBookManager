@@ -1,20 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { fetchRecords } from '../api/api';
+import React from 'react';
+import { RecordListProps } from "../types";
 
-
-
-const RecordList: React.FC = () => {
-    const [records, setRecords] = useState<IRecord[]>([]);
-
-    const loadRecords = async () => {
-        const data = await fetchRecords();
-        setRecords(data);
-    };
-
-    useEffect(() => {
-        loadRecords();
-    }, []);
-
+const RecordList: React.FC<RecordListProps> = ({ records, onEdit }) => {
     return (
         <div className="p-4">
             <h2 className="text-lg font-bold mb-4">Records</h2>
@@ -26,6 +13,7 @@ const RecordList: React.FC = () => {
                     <th className="border border-gray-300 px-4 py-2">Age</th>
                     <th className="border border-gray-300 px-4 py-2">Email</th>
                     <th className="border border-gray-300 px-4 py-2">Question</th>
+                    <th className="border border-gray-300 px-4 py-2">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -36,6 +24,14 @@ const RecordList: React.FC = () => {
                         <td className="border border-gray-300 px-4 py-2">{record.age}</td>
                         <td className="border border-gray-300 px-4 py-2">{record.email}</td>
                         <td className="border border-gray-300 px-4 py-2">{record.question}</td>
+                        <td className="border border-gray-300 px-4 py-2">
+                            <button
+                                onClick={() => onEdit(record)}
+                                className="bg-yellow-500 text-white px-4 py-1 rounded"
+                            >
+                                Edit
+                            </button>
+                        </td>
                     </tr>
                 ))}
                 </tbody>
