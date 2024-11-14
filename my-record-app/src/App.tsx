@@ -19,6 +19,7 @@ const App: React.FC = () => {
 
     const handleRecordCreated = (newRecord: IRecord) => {
         if (editRecord) {
+
             setRecords((prevRecords) => prevRecords.map(record => record.id === newRecord.id ? newRecord : record)); // Оновлюємо запис
             setEditRecord(null);
         } else {

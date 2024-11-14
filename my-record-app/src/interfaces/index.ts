@@ -1,7 +1,7 @@
 export interface IRecord {
-    id: number;
+    id?: number;
     name: string;
-    age: number;
+    age: number|null;
     email: string;
     question: string;
 }
