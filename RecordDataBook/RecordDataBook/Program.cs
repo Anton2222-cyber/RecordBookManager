@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using RecordDataBook.Context;
-using RecordDataBook.Interfaces;
+using RecordDataBook.Data;
+using RecordDataBook.Data.Repositories;
+using RecordDataBook.Interfaces.Repositories;
+using RecordDataBook.Interfaces.Services;
 using RecordDataBook.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("Npgsql")));
 
+
+builder.Services.AddScoped<IRecordRepository, RecordRepository>();
 builder.Services.AddScoped<IRecordService, RecordService>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

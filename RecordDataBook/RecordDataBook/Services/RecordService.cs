@@ -1,62 +1,32 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RecordDataBook.Context;
+using RecordDataBook.Data;
 using RecordDataBook.Entities;
-using RecordDataBook.Interfaces;
+using RecordDataBook.Interfaces.Repositories;
+using RecordDataBook.Interfaces.Services;
 
 namespace RecordDataBook.Services
 {
-    public class RecordService : IRecordService
+    public class RecordService (
+        IRecordRepository repository
+    ): IRecordService
     {
-        private readonly AppDbContext _context;
 
-        public RecordService(AppDbContext context)
-        {
-            _context = context;
-        }
 
         public async Task<IEnumerable<Record>> GetRecordsAsync()
         {
-            return await _context.Records.ToListAsync();
+           return await repository.GetAllAsync();
         }
 
-        public async Task<bool> IsEmailUniqueAsync(string email)
+        
+
+        public async Task CreateRecordAsync(Record record)
         {
-            return !await _context.Records.AnyAsync(r => r.Email == email);
+            await repository.AddAsync(record);
         }
 
-        public async Task<Record> CreateRecordAsync(Record record)
+        public async Task UpdateRecordAsync(Record updatedRecord)
         {
-            if (!await IsEmailUniqueAsync(record.Email))
-            {
-                throw new InvalidOperationException("Record with this email already exists.");
-            }
-
-            _context.Records.Add(record);
-            await _context.SaveChangesAsync();
-            return record;
-        }
-
-        public async Task<Record> UpdateRecordAsync(int id, Record updatedRecord)
-        {
-            var existingRecord = await _context.Records.FindAsync(id);
-            if (existingRecord == null)
-            {
-                throw new InvalidOperationException("Record not found.");
-            }
-
-            if (existingRecord.Email != updatedRecord.Email && !await IsEmailUniqueAsync(updatedRecord.Email))
-            {
-                throw new InvalidOperationException("Record with this email already exists.");
-            }
-
-            existingRecord.Name = updatedRecord.Name;
-            existingRecord.Age = updatedRecord.Age;
-            existingRecord.Question = updatedRecord.Question;
-            existingRecord.Email = updatedRecord.Email;
-
-            _context.Records.Update(existingRecord);
-            await _context.SaveChangesAsync();
-            return existingRecord;
+            await repository.UpdateAsync(updatedRecord);
         }
 
     }

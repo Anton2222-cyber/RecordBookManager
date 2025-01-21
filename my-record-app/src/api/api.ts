@@ -20,7 +20,8 @@ export const fetchRecords = async () => {
 export const createRecord = async (record: IRecord) => {
     try {
         const response = await api.post('/api/record', record);
-        return response.data;
+        console.log('Response from server:', response.data); // Додайте це
+        return response.data.record;
     } catch (error) {
         if (axios.isAxiosError(error)) {
             if (error.response) {
@@ -36,6 +37,7 @@ export const createRecord = async (record: IRecord) => {
 
 export const updateRecord = async (id: number, record: IRecord) => {
     try {
+        record.id = id;
         const response = await api.put(`/api/record/${id}`, record);
         return response.data;
     } catch (error) {

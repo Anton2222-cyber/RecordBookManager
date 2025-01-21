@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import RecordList from './components/RecordList';
 import CreateRecordForm from "./components/CreateRecordForm";
-import { IRecord } from "./interfaces";
-import { fetchRecords } from "./api/api";
+import {IRecord} from "./interfaces";
+import {fetchRecords} from "./api/api";
 
 const App: React.FC = () => {
     const [records, setRecords] = useState<IRecord[]>([]);
@@ -17,12 +17,16 @@ const App: React.FC = () => {
         loadRecords();
     }, []);
 
-    const handleRecordCreated = (newRecord: IRecord) => {
-        if (editRecord) {
+    const onEditComplited = (id: number) => {
+        console.log('edit', id);
+        setEditRecord(null)
+        loadRecords();
 
-            setRecords((prevRecords) => prevRecords.map(record => record.id === newRecord.id ? newRecord : record)); // Оновлюємо запис
-            setEditRecord(null);
-        } else {
+    }
+
+
+    const handleRecordCreated = (newRecord: IRecord) => {
+        if (!editRecord) {
             setRecords((prevRecords) => [...prevRecords, newRecord]);
         }
     };
@@ -33,8 +37,8 @@ const App: React.FC = () => {
 
     return (
         <div>
-            <CreateRecordForm onRecordCreated={handleRecordCreated} editRecord={editRecord} />
-            <RecordList records={records} onEdit={handleEditRecord} />
+            <CreateRecordForm onRecordCreated={handleRecordCreated} editRecord={editRecord} onEditCompleted={onEditComplited}/>
+            <RecordList records={records} onEdit={handleEditRecord}/>
         </div>
     );
 };

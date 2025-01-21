@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RecordDataBook.Entities;
 
-namespace RecordDataBook.Context
+namespace RecordDataBook.Data
 {
     public class AppDbContext : DbContext
     {

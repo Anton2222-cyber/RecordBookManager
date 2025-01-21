@@ -1,22 +1,15 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using RecordDataBook.Context;
+﻿using Microsoft.AspNetCore.Mvc;
 using RecordDataBook.Entities;
-using RecordDataBook.Interfaces;
+using RecordDataBook.Interfaces.Services;
 
 namespace RecordDataBook.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RecordController : ControllerBase
+    public class RecordController(
+        IRecordService _recordService
+    ) : ControllerBase
     {
-        private readonly IRecordService _recordService;
-
-        public RecordController(IRecordService recordService)
-        {
-            _recordService = recordService;
-        }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Record>>> GetRecords()
@@ -26,25 +19,29 @@ namespace RecordDataBook.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Record>> CreateRecord(Record record)
+        public async Task<ActionResult> CreateRecord(Record record)
         {
             try
             {
-                var createdRecord = await _recordService.CreateRecordAsync(record);
-                return CreatedAtAction(nameof(GetRecords), new { id = createdRecord.Id }, createdRecord);
+               await _recordService.CreateRecordAsync(record);
+                return Ok(new
+                {
+                    record
+                });
             }
             catch (InvalidOperationException ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
+            
         }
         [HttpPut("{id}")]
-        public async Task<ActionResult<Record>> UpdateRecord(int id, Record record)
+        public async Task<ActionResult> UpdateRecord(Record record)
         {
             try
             {
-                var updatedRecord = await _recordService.UpdateRecordAsync(id, record);
-                return Ok(updatedRecord);
+                await _recordService.UpdateRecordAsync(record);
+                return Ok();
             }
             catch (InvalidOperationException ex)
             {

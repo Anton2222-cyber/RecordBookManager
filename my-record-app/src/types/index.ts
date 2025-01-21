@@ -8,6 +8,5 @@ export type RecordListProps = {
 export interface CreateRecordFormProps {
     onRecordCreated: (record: IRecord) => void;
     editRecord?: IRecord | null;
-
-
+    onEditCompleted: (id: number) => void;
 }

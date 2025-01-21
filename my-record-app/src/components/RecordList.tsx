@@ -2,6 +2,10 @@ import React from 'react';
 import { RecordListProps } from "../types";
 
 const RecordList: React.FC<RecordListProps> = ({ records, onEdit }) => {
+    if (records.length === 0) {
+        return <p className="text-center text-gray-500">No records available.</p>;
+    }
+
     return (
         <div className="p-4">
             <h2 className="text-lg font-bold mb-4">Records</h2>
